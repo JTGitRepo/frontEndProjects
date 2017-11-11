@@ -1,0 +1,59 @@
+	body {
+		margin:0;
+		font-size: 14px;
+		font-family: arial;
+	}
+
+	.subjectDiv {
+		border: 2px solid black;
+		display: inline-block;
+		text-align: center;
+		padding: 5px;
+		position: relative;
+		top: 50px;
+		left: 50px;
+		transition: 1s;
+
+	}
+
+	.mouseover {
+		font-size: 2em;
+
+
+	}
+
+	.textbody {
+		border: 2px solid black;
+		font-size: 18px;
+		position: absolute;
+		top: 100px;
+		left: 50px;
+		width: 0px;
+		height: 150px;
+		visibility: hidden;
+		overflow:hidden;
+
+		/*opacity: 0;*/
+		/*transition: all 1.5s;*/
+		transition: all 1s;
+
+	}
+
+	.textbodyexpand {
+		width: 200px;
+		visibility: visible;
+
+	}
+
+	.text {
+		opacity:0;
+
+	}
+
+	.showtext {
+		opacity: 1;
+
+	}
+
+
+

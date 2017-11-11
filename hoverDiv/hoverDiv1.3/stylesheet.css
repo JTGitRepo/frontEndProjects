@@ -1,0 +1,175 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body {
+	font-family: arial;
+	overflow-x: hidden;
+}
+
+#container {
+	max-width: 90%;
+	margin: 0 auto;
+	margin-top: 100px;
+	height: 90vh;
+
+}
+
+.border {
+}
+
+.border-left {
+	min-height: 800px;
+
+	position: relative;
+	left: 50%;
+	/*width: 100%;*/
+	border: 3px solid gray;
+	border-right: none;
+	border-top: none;
+	border-bottom: none;
+	/*border-radius:50px 0 0 70px;*/
+	/*margin: -2px 0;*/
+	/*margin-left: 2%;*/
+
+}
+
+
+
+
+/*
+.icon-container-left {
+	position: relative;
+	top: 100px;
+	left: -50px;
+
+}*/
+/*.icon-container-right {
+	position: relative;
+	float: right;
+}*/
+.subject-left {
+	font-size: 2em;
+	/*text-align: center;*/
+	color: gray;
+	/*primary styling */
+	/*top: 100px;*/
+	left: -100px;
+
+	background: white;
+	/*float:left;*/
+	border: 1.5px solid gray;
+	padding-left: 25px;
+	border-radius:  10px;
+
+	
+	/*positioning */
+
+	position: relative;
+	/*top: 20px;*/
+	/*left: 0;*/
+
+	/*transition presets */
+
+	width: 200px;
+	height: 50px;
+
+	transition: height .5s .5s,
+	left .5s 1s,
+	/*border-bottom-left-radius .5s .5s,*/
+	width .5s 1s,
+	font-size .5s .5s;
+
+	/*box-shadow: 0 0 0;*/
+}
+
+.text-container {
+	/*width: 90%;
+	margin: 0 auto;*/
+	/*border: 1px solid black;*/
+}
+
+.subject-expand-left {
+	transition:
+	width .7s,
+	left .7s,
+	font-size .7s .7s,
+	 height .7s .7s;
+	 left: -50%;
+	 /*border-bottom-left-radius 1s 1s;*/
+	/*border-bottom-left-radius: 70px;*/
+	font-size: 1.5em;
+	height: 90vh;
+	width: 100%;
+}
+
+.subject-clicked-left {
+/*transition: all;*/
+	/*width .5s,
+	font-size .5s .5s,
+	 height .5s;*/
+	 left: -50%;
+
+	font-size: 1.5em;
+	height: 90vh;
+	width: 100%;
+	/*border-bottom-left-radius: 40px;*/
+}
+
+
+
+
+
+
+
+.content{
+	/*height: 75vh;*/
+	/*width: 70vw;/*/
+	width: 90%;
+	margin: 0 auto;
+	font-size: .8em;
+	opacity: 0.0;
+	visibility: hidden;
+	transition: opacity .3s,
+	visibility 1s;
+	height: 100%;
+
+}
+
+.content img {
+	/*position: relative;*/
+	/*left: -52px;*/
+	/*float:left;*/
+	/*margin: 0;*/
+
+	height: auto;
+	width: auto;
+	/*height: 500px;*/
+	/*margin: 0 auto;*/
+	/*max-height: 100%;*/
+}
+
+.content div {
+	width: 80%;
+}
+
+
+
+.content-show{
+	opacity: 1.0;
+	visibility: visible;
+	
+	transition:
+	 opacity 1s 1.5s,
+	visibility 1s .5s;
+}
+
+.content-show-clicked {
+	opacity: 1;
+	visibility: visible;
+	transition: 
+		opacity 1s 2s,
+		visibility 1s 1.5s;
+}
+
+

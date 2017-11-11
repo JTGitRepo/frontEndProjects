@@ -1,0 +1,81 @@
+body {
+	font-family: arial;
+}
+
+.column {
+	height: 600px;
+	margin-left: 60px;
+	/*width: 40%;*/
+	border-left: 3px solid black;
+	border-bottom: 3px solid black;
+}
+
+.icon-container {
+	margin-bottom: 200px;
+	position: relative;
+	top: 100px;
+}
+
+.subject {
+	border: 2px solid black;
+	display: inline-block;
+	padding: 10px;
+	/*position: relative;*/
+	/*top: 100px;*/
+	/*left: 30%;*/
+	transition: all 1.5s;
+	float:left;
+
+
+}
+
+.subject-expand {
+	font-size: 1.2em;
+}
+
+
+.text-box {
+	border: 2px solid black;
+	visibility: hidden;
+	/*float:right;*/
+	width: 0;
+	height: 0;
+	padding: 0;
+	box-shadow: 0 0 0;
+	overflow: hidden;
+	transition: box-shadow .5s,
+				/*padding .5s,*/
+				height .5s .1s,
+				width .5s .5s,
+				visibility .1s .8s;				/*border .5s 1s;*/
+
+}
+
+/*.border {
+	border: 2px solid black;
+	opacity: 1;
+}
+*/
+.text-grow{
+	border: 2px solid black;
+	/*width: 200px;*/
+	width: 80%;
+	height: 400px;
+	/*height: 120px;*/
+	visibility: visible;
+	padding: 15px;
+	box-shadow: 2px 2px 10px;
+	/*opacity: 1;*/
+	transition: width .5s,
+				height 1s .5s,
+				padding 1s .5s,
+				box-shadow .5s 1s;
+}
+
+/*.text-length-grow {*/
+	/*height: 120px;*/
+
+/*}*/
+
+
+

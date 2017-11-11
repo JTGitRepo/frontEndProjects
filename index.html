@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+
+		<input type="text" id="word">
+		<button id="btn">click me!</button>	
+	<ul id="display"></ul>
+
+
+<script>
+
+
+var dict = []
+var display = document.getElementById("display")
+var addWord = document.getElementById("btn");
+
+
+addWord.addEventListener("click", function(){
+	var li = document.createElement("li");
+	var word = document.getElementById("word");
+	var text = document.createTextNode(word.value)
+	li.appendChild(text)
+
+	display.appendChild(li)
+	word.value = ''
+		
+})
+
+
+
+
+
+
+
+		
+
+</script>
+
+
+</body>
+</html>
+

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Looping through nodelists</title>
+	<style>
+		ul {
+		border: 1px solid black;
+		list-style-image: none;
+			display: block;
+
+
+	
+		}
+		ul li {
+			display: block;
+			background: green;
+			margin: 2px;
+			width: 600px;
+			height: 60px;
+		}
+	</style>
+
+</head>
+<body>
+
+	<ul>
+		<li class='li'></li>
+		<li class='li'></li>
+		<li class='li'></li>
+		<li class='li'></li>
+	</ul>
+	<button>click me</button>
+	<script>
+		var button = document.querySelector('button');
+		var li = document.querySelectorAll('li');
+
+		for(var i = 0; i < li.length; i++){
+			button.addEventListener('click', function(){
+				for(var i = 0; i < li.length; i++){
+					if(li[i].style.background === 'green'){li[i].style.background = 'blue';
+				} else {
+					li[i].style.background = 'green';
+				}
+						
+				}
+			});
+		}
+	</script>
+</body>
+</html>

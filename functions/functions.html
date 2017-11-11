@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>functions in javascript</title>
+</head>
+<body>
+	<script>
+		function higherOrder(arg1, arg2, func){
+			var total = arg1 + arg2;
+			return [func, total];
+		}
+
+		var func = higherOrder(1,2, function(arg){
+
+		})[0];
+
+		console.log(func);
+	</script>
+</body>
+</html>

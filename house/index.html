@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>welcome to my house</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			border-radius: 2px
+		}
+		body {
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-end;
+			background: lightblue;
+			/*height: 100vh;*/
+			/*position: relative;*/
+		}
+
+		.yard {
+			background: green;
+			height: 200px;
+			/*position: relative;*/
+			/*bottom: 0;*/
+			z-index: -20;
+		}
+
+		.house {
+			position: relative;
+			height: 500px;
+			width: 500px;
+			background: yellow;
+			margin: 0 auto;
+			top: 100px;
+			/*bottom: 100px;*/
+			/*margin-top: 50px;*/
+		}
+		.doorway {
+			height: 200px;
+			width: 150px;
+			background: lightgray;
+			position: relative;
+			left: 175px;
+			top: 300px;
+			}
+		.door {
+			height: 200px;
+			width: 150px;
+			background: brown;
+			}
+
+		.dooropen {
+			position: relative;
+			right: 150px;
+		}
+
+		.window-left {
+			background: lightgray;
+			height: 150px;
+			width: 100px;
+			position: relative;
+			bottom: 125px;
+			left: 50px;
+		}
+		
+
+		.window-right {
+			background: lightgray;
+			height: 150px;
+			width: 100px;
+			position: relative;
+			left: 350px;
+			bottom: 275px;
+		}
+
+		.shudder-left {
+			height: inherit;
+			background: forestgreen;
+			width: 50%;
+			float: left;
+		}
+
+		.shudder-right {
+			height: inherit;
+			background: forestgreen;
+			width: 50%;
+			float: left;
+		}
+
+		.shudder-left-open {
+			background: orange;
+			position: relative;
+			right: 50px;
+		}
+
+		.shudder-right-open {
+			background: orange;
+			position: relative;
+			left: 50px;
+		}
+	</style>
+</head>
+<body>
+	<script>
+	function createElAndSetAttribute(ElementId, parent){
+		parent = typeof parent === "undefined" ? "body" : parent;
+		var div = document.createElement("DIV");
+		div.setAttribute("class", ElementId);
+		if(parent === 'body'){
+			document.body.appendChild(div);
+		} else{
+			document.querySelector(parent).appendChild(div)
+		}
+	}
+
+	createElAndSetAttribute("house")
+	createElAndSetAttribute("doorway", ".house")
+	createElAndSetAttribute("door", ".doorway")
+	createElAndSetAttribute("window-left", ".house")
+	createElAndSetAttribute("window-right", ".house")
+	createElAndSetAttribute("shudder-left", ".window-right")
+	createElAndSetAttribute("shudder-right", ".window-right")
+	createElAndSetAttribute("shudder-left", ".window-left")
+	createElAndSetAttribute("shudder-right", ".window-left")
+	createElAndSetAttribute("yard")
+
+
+		// var div = document.createElement("DIV");
+		// div.setAttribute("id", "house");
+		// document.body.appendChild(div);
+		
+		// div = document.createElement("DIV");
+		// div.setAttribute("id", "doorway");
+		// document.getElementById("house").appendChild(div);
+		
+		// div = documesnt.createElement("DIV");
+		// div.setAttribute("id", "door");
+		// document.getElementById("doorway").appendChild(div);
+		
+		var door = document.querySelector(".door");
+		door.addEventListener("click", function(){
+			this.classList.toggle("dooropen");
+		});
+
+			var shudderLeft = document.querySelectorAll(".shudder-left");
+			for (var i = 0; i < shudderLeft.length; i++) {
+				shudderLeft[i].addEventListener("click", function(){
+					this.classList.toggle("shudder-left-open");
+				});}
+
+			var shudderRight = document.querySelectorAll(".shudder-right");
+			for (var i = 0; i < shudderRight.length; i++) {
+				shudderRight[i].addEventListener("click", function(){
+					this.classList.toggle("shudder-right-open");
+				});}
+	</script>
+</body>
+</html>

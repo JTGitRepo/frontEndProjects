@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- Load the Paper.js library -->
+<style>
+html,
+body {
+    margin: 0;
+    overflow: hidden;
+    height: 100%;
+}
+
+/* Scale canvas with resize attribute to full size */
+canvas[resize] {
+    width: 100%;
+    height: 100%;
+		margin: 2px;
+		border: 4px solid black;
+
+
+}
+
+</style>
+<script type="text/javascript" src="js/paper.js"></script>
+<!-- Define inlined PaperScript associate it with myCanvas -->
+<script type="text/paperscript" canvas="myCanvas">
+var squarePath = new Path.Rectangle(new Point(20, 100), new Size(100));
+squarePath.strokeColor = " black"
+squarePath.onMouseMove = function(event){
+  	if (this.contains(event.point)) {
+       this.fillColor = 'black';
+	} else {
+       this.fillColor = 'white';
+
+	}
+}
+
+//var squareSymbol = new Symbol(squarePath);
+ 
+
+
+
+// lets place some squares using symbols, and rotate each instance slightly
+//for (var i = 0; i < 5; i++) {
+  //var placedSymbol = squareSymbol.place(new Point(100 + (i * 150), 150));
+//}
+  //placedSymbol.rotate(i * 10); // operation on the instance
+
+
+
+ 
+
+
+
+
+//function onFrame(event) {
+ // Add 1 degree to the hue
+ // of the symbol definition's fillColor:
+ //squareSymbol.definition.fillColor.hue += 1;
+ // rotate
+ //squareSymbol.definition.rotate(0.2);
+//}  
+
+
+</script>
+</head>
+<body>
+	<canvas id="myCanvas" resize="true"></canvas>
+
+	<script>
+	
+
+
+	</script>
+</body>
+</html>

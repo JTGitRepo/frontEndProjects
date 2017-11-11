@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style>
+	body {
+		font-family: sans-serif;
+	}
+
+	div {
+		width: 100%;
+		text-align: center;
+		font-size: 5vw;
+	}
+
+	#container {
+		display:block;
+		width: 70%;
+		/*height: 80vh;*/
+		margin: 0 auto;
+		padding: 20px;
+		background: navy;
+		border-radius: 20px;
+		max-height: 90vh;		
+	}
+
+	.child {
+		background: navy;
+		color: orange;
+	}
+
+	#mover {
+		background: orange;
+		color: navy;
+		font-weight: bold;
+		border-radius: 10px;
+	}
+
+	.top {
+		border-radius-top: 50px;
+	}
+</style>
+<body>
+
+<!-- USE SETINTERVAL FUNCTION TO MOVE AN ADD AND REMOVE AN ELEMENT DOWN
+A SET OF TEN ELEMENTS -->
+<script>
+//		This function creates an element and appends it to an element with optional parameters for adding attributes and inner html content
+		function createElement(elementName, att, attName, innerHTML){
+			if(elementName){ //checks for elementName argument
+				var element  = document.createElement(elementName); //creates child element in DOM
+			} else {
+				var element = document.createElement('div'); //creates child element in DOM
+			}
+			if(att, attName){ // checks for attributes
+				element.setAttribute(att, attName) // if applicable, assigns attribute to element
+			}
+			if(innerHTML){
+				element.innerHTML = innerHTML;
+			}
+			return element; 
+		}
+
+
+
+		var main = document.body.appendChild(createElement(undefined, 'id', 'container'))
+		var mover = createElement('div', 'id', 'mover', 'IS ON SALE!')
+		main.appendChild(mover)
+		for( var i = 5; i > 0; i--){
+			main.appendChild(createElement(undefined, 'class', 'child', "EVERYTHING"))	
+		}
+
+		// var top = main.firstChild
+		// top.setAttribute('class', 'top')
+		// var bottom = main.lastChild
+		// bottom.setAttribute('class', 'bottom')
+
+
+
+		
+  				setInterval(function() {
+  					var mover = document.getElementById('mover')
+  					var nextSib = mover.nextSibling
+  					if(!nextSib){
+  						nextSib = main.firstChild;
+  						nextSib.before(mover)
+					} else {
+  						nextSib.after(mover)
+
+  					}
+				}, 500);
+
+				// 	setInterval(function() {
+  		// 			var mover = document.getElementById('mover')
+  		// 			var prevSib = mover.previousSibling
+  		// 			if(!prevSib){
+  		// 				prevSib = main.lastChild;
+  		// 				prevSib.after(mover)
+				// 	} else {
+  		// 				prevSib.before(mover)
+
+  		// 			}
+				// }, 500);
+			
+				
+		
+
+
+
+
+
+		
+
+
+
+		// this function counts down from num parameter
+
+	function reduceChar(char, num){
+		if (num >= 0){
+			var line = char;
+			for(var i = num; i > 0; i--){
+				line += char;
+			}
+		// console.log(line);
+		var element = createElement(undefined, undefined, undefined, line)
+		main.appendChild(element)
+		return reduceChar(char, num -1)	
+		}
+		
+	}
+
+	
+
+	// reduceChar('x', 10)
+
+
+
+
+
+
+
+
+
+</script>
+	
+</body>
+</html>

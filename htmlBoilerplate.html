@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<script>
+//		This function creates an element and appends it to an element with optional parameters for adding attributes and inner html content
+	function createEl(att, attName, parentEl, parentIndex, innerHTML){
+		var parentEl = document.getElementsByTagName(parentEl)[parentIndex]
+		if(parentEl){ // if there is an parentEl argument, createEl uses the getElementsByTagName method to get that element in the html file and assigns the first element of its kind to the append to variable.
+		} else { // if the append to parameter is undefined
+			parentEl = document.body
+		}
+		var el = document.createElement('Div');
+		if(innerHTML){
+			el.innerHTML = innerHTML
+		}
+		parentEl.appendChild(el);
+		if(att, attName){
+			el.setAttribute(att, attName);
+		}	
+	}
+
+
+	function reduceChar(char, num){
+		if (num >= 0){
+			var line = char;
+			for(var i = num; i > 0; i--){
+				line += char;
+			}
+		// console.log(line);
+		createEl(undefined, undefined, undefined, undefined, line)
+		return reduceChar(char, num -1)	
+		}
+		
+	}
+	createEl('id', 'main', 'body')
+
+	reduceChar('Ashleys butt smells! ', 6)
+
+	var text = 'fuck you, Jared. ';
+	var length = text.length
+
+	createEl(undefined, undefined, undefined, undefined,  length)
+	createEl(undefined, undefined, 'div', 9,  'suck my duck ')
+	createEl(undefined, undefined, undefined, undefined,  'Ashleys butt smells. ')
+
+
+
+
+
+</script>
+	
+</body>
+</html>

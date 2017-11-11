@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>Canvas tutorial</title>
+    <script type="text/javascript">
+      function draw() {
+     
+    function collides(rects, x, y) {
+    var isCollision = false;
+    for (var i = 0, len = rects.length; i < len; i++) {
+        var left = rects[i].x, right = rects[i].x+rects[i].w;
+        var top = rects[i].y, bottom = rects[i].y+rects[i].h;
+        if (right >= x
+            && left <= x
+            && bottom >= y
+            && top <= y) {
+            isCollision = rects[i];
+        }
+    }
+    return isCollision;
+}
+
+
+      var canvas = document.getElementById('canvas');
+var ctx = canvas.getContext('2d');
+var raf;
+
+var square = {
+ x: 10,
+ y: 10,
+ side: 50,
+ color: 'limegreen',
+ draw: function(){
+  ctx.fillStyle = this.color;
+  ctx.strokeRect(this.x, this.y, this.side, this.side);
+  ctx.fillRect(this.x, this.y, this.side, this.side);
+
+  }
+  }
+  square.draw()
+
+
+}
+
+
+
+
+   // var canvas = document.getElementById('tutorial');
+        // if (canvas.getContext) {
+        //   var ctx = canvas.getContext('2d');
+
+      //     ctx.canvas.width  = window.innerWidth; 
+        // ctx.canvas.height = window.innerHeight;
+        //<------ MAKES CANVAS HEIGHT/WIDTH EQUAL TO WINDOW H/W
+
+    //       var squareColor = 'rgb(250, 250, 200)'
+    //       var xPosition = 10;
+    //       var yPosition = 10;
+    //       var squareSide = canvas.width /20;
+    //       var numberOfSquares = canvas.width* canvas.height / squareSide *squareSide
+    //       // document.write(numberOfSquares)
+    //       for(var i=0; i < numberOfSquares; i++){
+    //           ctx.fillStyle = squareColor;
+    //           ctx.strokeRect(xPosition, yPosition, squareSide, squareSide);
+    //           ctx.fillRect(xPosition, yPosition, squareSide, squareSide);
+    //           ctx.addHitRegion({id: 'square'});
+
+        // canvas.addEventListener('mousemove', function(event) {
+      //      if (event.region) {
+    //        alert('hit region: ' + event.region);
+      //      }
+        // });
+
+    //           xPosition += squareSide
+    //           if (xPosition >= canvas.width - 20){
+    //            yPosition += squareSide
+    //            xPosition = 10
+    //           }
+     //    }
+
+              
+         
+    //     }
+    //   }
+    </script>
+    <style type="text/css">
+    html, body {
+  width:  100%;
+  height: 100%;
+  margin: 0px;
+}
+      canvas { 
+      	border: 1px solid black;
+      	position: relative;
+      	left: 20%;
+				
+
+       }
+    </style>
+  </head>
+  <body onload="draw();">
+    <canvas id="canvas" width="600" height="400"></canvas>
+  </body>
+</html>

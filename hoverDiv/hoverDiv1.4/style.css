@@ -1,0 +1,118 @@
+*{
+		font-family: 'Courgette', cursive;
+		margin:0;
+		font-size: 10px;
+
+	}
+
+	html {
+		background: #4fd;
+		/*background: url("back2.jpg") no-repeat center center fixed;*/
+		/*background-size: cover;*/
+	}
+
+	#container{
+		height: 150vh;
+		float: left;
+		/*margin-left: 5vw;*/
+		/*margin-right: 5vw;*/
+		width: 100vw;
+
+	}	
+
+	#container1{
+		height: 150vh;
+		float: left;
+		/*margin-left: 5vw;*/
+		/*margin-right: 5vw;*/
+		width: 100vw;
+
+	}
+
+		#container2{
+		height: 150vh;
+		float: left;
+		/*margin-left: 5vw;*/
+		/*margin-right: 5vw;*/
+		width: 100vw;
+
+	}
+
+		#container3{
+		height: 150vh;
+		float: left;
+		/*margin-left: 5vw;*/
+		/*margin-right: 5vw;*/
+		width: 100vw;
+
+	}
+
+	#container-right{
+		float: left;
+		margin-right: 5vw;
+		width: 45vw;
+
+	}
+
+		.subject {
+			margin: 20vh 40vw;
+			font-size: 4em;
+			height: 20vw;
+			width: 20vw;
+			border: 4px solid black;
+			border-radius: 200px;
+			text-align: center;
+			line-height: 6;
+			background: #ffffff;
+			transition: width .5s,
+			height .5s,
+			border-radius .5s,
+			margin .5s,
+			font-size .5s;
+		}
+
+
+		.left {
+
+			/*margin-bottom: 200vh;*/
+			/*float: left;*/
+			/*margin-bottom: 1200px;*/
+
+		
+		}
+
+		.left-text {
+			margin-left: 200px;
+			/*z-index: 0;*/
+		}
+
+		.right{
+			/*float: right;*/
+			/*clear: both;*/
+			/*margin-top: -700px;*/
+
+		
+		}
+
+		.subject-expand {
+			margin:0;
+			margin-top: 20vh;
+			width: 100%;
+			height: 100vh;
+			line-height: 2;
+			border-radius: 0;
+			font-size: 4em;
+			transition:
+				margin 1s,
+				width 1s ease,
+				height 1s ease,
+				border-radius 1s ease,
+				font-size 1s,
+				line-height 1s
+		}
+
+/*
+		.subject:hover{
+			width: 90vw;
+			height: 80vh;
+		}*/
