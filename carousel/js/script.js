@@ -7,6 +7,7 @@ $(window).resize(function(){
 
 	$('.container').animate({
 		scrollLeft: $('.focus').scrollLeft}, 00);
+		counter = 0;
 	// $('.container').animate({
 	// 	scrollLeft: $}, 1500);
 	// 	console.log(window.scrollX())
@@ -24,7 +25,7 @@ $('#right').click(function() {
   }
 	switchClass()
 	$('.container').animate({
-		scrollLeft: '+=' + $('.tile').width() }, 1500);
+		scrollLeft: '+=' + $('.tile').width() }, 1000);
 		$(this).removeClass('proc')
 })
 
@@ -37,7 +38,7 @@ $('#left').click(function() {
 	switchClass()
 
 	$('.container').animate({
-		scrollLeft: '-=' + window.innerWidth }, 1500);
+		scrollLeft: '-=' + window.innerWidth }, 1000);
 })
 
 function switchClass() {

@@ -7,7 +7,7 @@ body {
   /*width: 80vw;*/
   /*border: 5px solid black;*/
   overflow: hidden;
-  height: 100vh;
+  height: 110vh;
   /*white-space: nowrap*/
   display: flex;
 }
@@ -21,7 +21,7 @@ body {
 .content{
   margin: 0 9%;
   color: #fefefe;
-  
+
 }
 
 h1 {
